@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+  FORMULARIO DE EDICIÓN/CREACIÓN DE PRODUCTO
+
+  Este layout contiene los campos de entrada
+  para capturar la información de un producto:
+  - Nombre
+  - Descripción
+  - Precio
+  - Cantidad
+  -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!--
+      CAMPO: NOMBRE DEL PRODUCTO
+      Campo de texto para ingresar el nombre.
+      - inputType="text": Abre teclado alfabético
+      - hint: Texto de ayuda "Nombre del producto"
+    -->
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del producto"
+        android:inputType="text"/>
+
+    <!--
+      CAMPO: DESCRIPCIÓN
+      Campo de texto para la descripción del producto.
+      - layout_marginTop="8dp": Separa 8dp del campo anterior
+      - hint: Texto de ayuda "Descripción"
+    -->
+    <EditText
+        android:id="@+id/etDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción"
+        android:inputType="text"
+        android:layout_marginTop="8dp"/>
+
+    <!--
+      CAMPO: PRECIO
+      Campo numérico decimal para el precio.
+      - inputType="numberDecimal": Solo números y decimales
+      - hint: Texto de ayuda "Precio"
+    -->
+    <EditText
+        android:id="@+id/etPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="8dp"/>
+
+    <!--
+      CAMPO: CANTIDAD
+      Campo numérico entero para la cantidad.
+      - inputType="number": Solo números enteros
+      - hint: Texto de ayuda "Cantidad"
+    -->
+    <EditText
+        android:id="@+id/etCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad"
+        android:inputType="number"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

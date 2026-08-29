@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ========================================
+  CARD DE PRODUCTO (Item de RecyclerView)
+  ========================================
+  Este layout define la apariencia de cada
+  elemento individual dentro de una lista
+  de productos en un RecyclerView.
+  -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp">
+
+    <!-- Contenedor vertical para organizar los textos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!--
+          ========================================
+          NOMBRE DEL PRODUCTO
+          ========================================
+          Muestra el título o nombre del producto
+          en negrita y tamaño 16sp.
+        -->
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <!--
+          ========================================
+          DESCRIPCIÓN DEL PRODUCTO
+          ========================================
+          Muestra detalles adicionales o descripción
+          del producto en color gris (#5B5B5B) y
+          tamaño 12sp.
+        -->
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#5B5B5B"/>
+
+    </LinearLayout>
+
+    <!--
+      ========================================
+      PRECIO Y CANTIDAD DEL PRODUCTO
+      ========================================
+      Esta sección muestra el precio y la
+      cantidad disponible de un producto en
+      una disposición horizontal.
+      -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp">
+
+        <!--
+          ========================================
+          PRECIO DEL PRODUCTO
+          ========================================
+          Muestra el precio del producto en color
+          verde (#27D032) y en negrita. El
+          layout_weight="1" y width="0dp" permiten
+          que ocupe el espacio disponible.
+        -->
+        <TextView
+            android:id="@+id/tvPrecio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#27D032"/>
+
+        <!--
+          ========================================
+          CANTIDAD DEL PRODUCTO
+          ========================================
+          Muestra la cantidad disponible o el
+          número de unidades. También usa
+          layout_weight para distribuir el espacio.
+        -->
+        <TextView
+            android:id="@+id/tvCantidad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+
+    <!--
+  ========================================
+  BOTONES DE ACCIÓN (Editar/Eliminar)
+  ========================================
+  Este layout muestra dos botones en línea
+  horizontal para acciones sobre un producto:
+  - Editar: Modifica los datos del producto
+  - Eliminar: Borra el producto de la lista
+  -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:gravity="end">
+
+        <!--
+          ========================================
+          BOTÓN EDITAR
+          ========================================
+          Permite modificar la información del
+          producto seleccionado. Texto en color
+          azul (#2196F3).
+        -->
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar"
+            android:textColor="#2196F3"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <!--
+          ========================================
+          BOTÓN ELIMINAR
+          ========================================
+          Permite eliminar el producto seleccionado.
+          Texto en color verde (#04C288).
+        -->
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:textColor="#04C288"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
